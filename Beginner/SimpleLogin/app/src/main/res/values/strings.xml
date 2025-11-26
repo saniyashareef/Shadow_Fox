@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">SimpleLogin</string>
+    <string name="app_title">Simple Login</string>
+
+    <!-- Login hints -->
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+
+    <!-- Button -->
+    <string name="button_login">Login</string>
+
+    <!-- Attempts -->
+    <string name="attempts_left">Attempts left</string>
+    <string name="text_attempts_left">Attempts left:</string>
+    <string name="locked_message">Attempts left: 0 (locked)</string>
+
+    <!-- Forgot password -->
+    <string name="text_forgot_password">Forgot Password?</string>
+    <string name="forgot_title">Forgot Password</string>
+    <string name="forgot_hint">Enter your username or email</string>
+    <string name="forgot_submit">Submit</string>
+    <string name="forgot_cancel">Cancel</string>
+    <string name="reset_message">If account exists, a reset link was sent.</string>
+
+    <!-- Welcome message -->
+    <string name="Welcome_message">Welcome, %1$s!</string>
+</resources>
