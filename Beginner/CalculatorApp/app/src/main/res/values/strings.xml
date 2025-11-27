@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CalculatorApp</string>
+
+    <!-- Memory -->
+    <string name="mc">MC</string>
+    <string name="mr">MR</string>
+    <string name="m_plus">M+</string>
+    <string name="m_minus">M-</string>
+
+    <!-- Scientific -->
+    <string name="sin">sin</string>
+    <string name="cos">cos</string>
+    <string name="tan">tan</string>
+    <string name="sqrt">√</string>
+    <string name="log">log</string>
+    <string name="ln">ln</string>
+    <string name="x2">x²</string>
+    <string name="xpow">x^y</string>
+
+    <!-- Operators / controls -->
+    <string name="clear">C</string>
+    <string name="back">⌫</string>
+    <string name="percent">%</string>
+    <string name="div">/</string>
+    <string name="mul">*</string>
+    <string name="sub">-</string>
+    <string name="add">+</string>
+    <string name="eq">=</string>
+    <string name="dot">.</string>
+
+    <!-- Digits -->
+    <string name="d_00">00</string>
+    <string name="d_0">0</string>
+    <string name="d_1">1</string>
+    <string name="d_2">2</string>
+    <string name="d_3">3</string>
+    <string name="d_4">4</string>
+    <string name="d_5">5</string>
+    <string name="d_6">6</string>
+    <string name="d_7">7</string>
+    <string name="d_8">8</string>
+    <string name="d_9">9</string>
+
+    <!-- Helpers -->
+    <string name="result_label">Result: %1$s</string>
+    <string name="concat_two">%1$s%2$s</string>
+    <string name="zero_dot">0.</string>
+    <string name="error">Error</string>
+</resources>

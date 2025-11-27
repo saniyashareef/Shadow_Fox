@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#121212">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <!-- Display -->
+        <TextView
+            android:id="@+id/tvDisplay"
+            style="@style/CalcDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:text="@string/d_0" />
+
+        <!-- Buttons Grid: MATCH_PARENT + column weights -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:alignmentMode="alignMargins"
+            android:useDefaultMargins="true"
+            android:layout_marginTop="20dp">
+
+            <!-- Memory Row (black buttons) -->
+            <Button style="@style/CalcButton"
+                android:id="@+id/btnMC"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/mc"
+                android:onClick="onMemory"/>
+
+            <Button style="@style/CalcButton"
+                android:id="@+id/btnMR"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/mr"
+                android:onClick="onMemory"/>
+
+            <Button style="@style/CalcButton"
+                android:id="@+id/btnMplus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/m_plus"
+                android:onClick="onMemory"/>
+
+            <!-- operator column slightly larger so it stands out -->
+            <Button style="@style/CalcButton"
+                android:id="@+id/btnMminus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1.25"
+                android:text="@string/m_minus"
+                android:onClick="onMemory"/>
+
+            <!-- Scientific Row -->
+            <Button style="@style/CalcButton"
+                android:id="@+id/btnSin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/sin"
+                android:onClick="onFunction"/>
+
+            <Button style="@style/CalcButton"
+                android:id="@+id/btnCos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/cos"
+                android:onClick="onFunction"/>
+
+            <Button style="@style/CalcButton"
+                android:id="@+id/btnTan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/tan"
+                android:onClick="onFunction"/>
+
+            <Button style="@style/CalcButton.Operator"
+                android:id="@+id/btnSqrt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1.25"
+                android:text="@string/sqrt"
+                android:onClick="onFunction"/>
+
+            <!-- Log & Power -->
+            <Button style="@style/CalcButton"
+                android:id="@+id/btnLog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/log"
+                android:onClick="onFunction"/>
+
+            <Button style="@style/CalcButton"
+                android:id="@+id/btnLn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/ln"
+                android:onClick="onFunction"/>
+
+            <Button style="@style/CalcButton"
+                android:id="@+id/btnPow2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/x2"
+                android:onClick="onFunction"/>
+
+            <Button style="@style/CalcButton.Operator"
+                android:id="@+id/btnPow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1.25"
+                android:text="@string/xpow"
+                android:onClick="onOperator"/>
+
+            <!-- Controls -->
+            <Button style="@style/CalcButton"
+                android:id="@+id/btnClear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/clear"
+                android:onClick="onClear"/>
+
+            <Button style="@style/CalcButton"
+                android:id="@+id/btnBack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/back"
+                android:onClick="onBackspace"/>
+
+            <Button style="@style/CalcButton"
+                android:id="@+id/btnPercent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/percent"
+                android:onClick="onPercent"/>
+
+            <Button style="@style/CalcButton.Operator"
+                android:id="@+id/btnDiv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1.25"
+                android:text="@string/div"
+                android:onClick="onOperator"/>
+
+            <!-- 7 8 9 * -->
+            <Button style="@style/CalcButton"
+                android:id="@+id/btn7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/d_7"
+                android:onClick="onDigit"/>
+
+            <Button style="@style/CalcButton"
+                android:id="@+id/btn8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/d_8"
+                android:onClick="onDigit"/>
+
+            <Button style="@style/CalcButton"
+                android:id="@+id/btn9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/d_9"
+                android:onClick="onDigit"/>
+
+            <Button style="@style/CalcButton.Operator"
+                android:id="@+id/btnMul"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1.25"
+                android:text="@string/mul"
+                android:onClick="onOperator"/>
+
+            <!-- 4 5 6 - -->
+            <Button style="@style/CalcButton"
+                android:id="@+id/btn4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/d_4"
+                android:onClick="onDigit"/>
+
+            <Button style="@style/CalcButton"
+                android:id="@+id/btn5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/d_5"
+                android:onClick="onDigit"/>
+
+            <Button style="@style/CalcButton"
+                android:id="@+id/btn6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/d_6"
+                android:onClick="onDigit"/>
+
+            <Button style="@style/CalcButton.Operator"
+                android:id="@+id/btnSub"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1.25"
+                android:text="@string/sub"
+                android:onClick="onOperator"/>
+
+            <!-- 1 2 3 + -->
+            <Button style="@style/CalcButton"
+                android:id="@+id/btn1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/d_1"
+                android:onClick="onDigit"/>
+
+            <Button style="@style/CalcButton"
+                android:id="@+id/btn2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/d_2"
+                android:onClick="onDigit"/>
+
+            <Button style="@style/CalcButton"
+                android:id="@+id/btn3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/d_3"
+                android:onClick="onDigit"/>
+
+            <Button style="@style/CalcButton.Operator"
+                android:id="@+id/btnAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1.25"
+                android:text="@string/add"
+                android:onClick="onOperator"/>
+
+            <!-- 00 0 . = -->
+            <Button style="@style/CalcButton"
+                android:id="@+id/btn00"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/d_00"
+                android:onClick="onDigit"/>
+
+            <Button style="@style/CalcButton"
+                android:id="@+id/btn0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/d_0"
+                android:onClick="onDigit"/>
+
+            <Button style="@style/CalcButton"
+                android:id="@+id/btnDot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="@string/dot"
+                android:onClick="onDot"/>
+
+            <Button style="@style/CalcButton.Operator"
+                android:id="@+id/btnEq"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1.25"
+                android:text="@string/eq"
+                android:onClick="onEqual"/>
+
+        </GridLayout>
+
+    </LinearLayout>
+</ScrollView>
